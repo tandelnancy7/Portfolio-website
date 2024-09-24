@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --main-color:#033a80;
+    --bg-color:#fff;
+    --text-color:#0f0c27;
+    --hover: #0b2b56;
+    --big-font:3.2rem;
+    --medium-font:1.8rem;
+    --p-font:0.941rem;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+  
+  
+
+/* Header styling */
+header {
+  background-color: #022553;
+  color: white;
+  padding: 35px 10px;
+  position: relative; 
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center navbar */
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  position: absolute; /* Position absolutely */
+  left: 10px; /* Distance from the left edge */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+.logo h1 {
+  margin-left: 40px;
+}
+
+/* Navbar styling */
+nav {
+  display: flex;
+  justify-content: center; /* Center the navbar items */
+  align-items: center;
+  max-width: 1200px; /* Adjust as needed */
+  width: 100%;
+}
+
+/* Menu toggle styling for mobile view */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute; /* Position the hamburger icon absolutely */
+  right: 10px; /* Adjust as needed */
+  top: 10px; /* Adjust as needed */
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between columns */
+  padding: 120px;
+}
+
+/* Text content styling */
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding-left: 0px;/* Center text vertically */
+}
+.text-content h1{
+  font-weight: 700;
+}
+.text-content p{
+  font-weight: 500;
+}
+
+/* Image content styling */
+.image-content img {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 300px; /* Remove bottom space/align issues */
+}
+
+.about-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 20px;
+}
+
+.social{
+    display: flex;
+}
+.social a{
+    margin-bottom: 1rem;
+    font-size: 22px;
+    color: var(--text-color);
+}
+.social a:hover{
+    color: var(--hover);
+}
+.social img{
+    width: 20px;
+    height: 20px;
+}
+
+.home-text span{
+    font-size: var(--medium-font);
+    font-weight: 500;
+}
+.home-text h1{
+    font-size: var(--big-font);
+}
+.home-text h2{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.home-text p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin: 0.7rem 0 1rem;
+}
+.btn{
+    display: inline-block;
+    background: var(--main-color);
+    color: #fff;
+    padding: 0.7rem 1.3rem;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    background: var(--hover);
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+  
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute; /* Position the menu absolutely */
+      top: 50px; /* Adjust based on header height */
+      right: 0;
+      background-color: #022553;
+  }
+  
+  .nav-links.active {
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    
+      padding: 60px;
+     /* Single column layout on small screens */
+}
+
+
+
+.image-content img {
+  width: 100%; /* Make image responsive */
+  height: 280px;
+  display: block;
+  padding-bottom: 20px;
+  align-items: center; /* Remove bottom space/align issues */
+}
+}
+
+@media (max-width: 321px) {
+
+  .text-content {
+    padding-left: 0px;/* Center text vertically */
+  }
+  .text-content h1{
+    font-size: 25px;
+  }
+
+  .text-content p{
+    font-size: 15px;
+  }
+
+  .image-content img {
+    width: 100%; /* Make image responsive */
+    height: 10px;
+    display: block;
+    padding-bottom: 20px; /* Remove bottom space/align issues */
+  }
+ 
+  .grid-container {
+    padding: 20px;
+  }
+  
+}
+
+
+@media (max-width: 376px) {
+
+  .text-content h1{
+    font-size: 28px;
+  }
+
+  .text-content p{
+    font-size: 15px;
+  }
+
+  .image-content img {
+    width: 100%; /* Make image responsive */
+    height: 230px;
+    display: block;
+    padding-bottom: 20px; /* Remove bottom space/align issues */
+  }
+  .grid-container {
+    padding: 20px;
+  }
+}

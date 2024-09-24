@@ -1,0 +1,40 @@
+header{
+    background: #333;
+    color: #ffff;
+    padding: 20px 0;
+    text-align: center;
+}
+main{
+    padding: 20px;
+}
+
+h1,h2,h3{
+    color: #333;
+}
+
+.project{
+    background: #ffff;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #0056b3;
+}
+
+.project-img{
+    width: 100%;
+    height: 440px;
+}

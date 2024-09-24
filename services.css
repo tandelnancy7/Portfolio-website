@@ -1,0 +1,254 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+  --main-color:#033a80;
+  --bg-color:#fff;
+  --text-color:#0f0c27;
+  --hover:#094a9e;
+  --big-font:3.2rem;
+  --medium-font:1.8rem;
+  --p-font:0.941rem;
+}
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+
+/* Header styling */
+header {
+background-color: #022553;
+color: white;
+padding: 35px 10px;
+position: relative; 
+display: flex; /* Enable flexbox layout */
+justify-content: center; /* Center navbar */
+align-items: center;
+}
+
+/* Logo styling */
+.logo {
+position: absolute; /* Position absolutely */
+left: 10px; /* Distance from the left edge */
+top: 50%; /* Center vertically */
+transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+.logo h1 {
+margin-left: 40px;
+}
+
+/* Navbar styling */
+nav {
+display: flex;
+justify-content: center; /* Center the navbar items */
+align-items: center;
+max-width: 1200px; /* Adjust as needed */
+width: 100%;
+}
+
+/* Menu toggle styling for mobile view */
+.menu-toggle {
+display: none;
+font-size: 24px;
+cursor: pointer;
+position: absolute; /* Position the hamburger icon absolutely */
+right: 10px; /* Adjust as needed */
+top: 10px; /* Adjust as needed */
+}
+
+/* Navigation links styling */
+.nav-links {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.nav-links li {
+margin: 0 15px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 18px;
+}
+
+.nav-links a:hover {
+text-decoration: underline;
+}
+
+.heading{
+  text-align: center;
+}
+.heading h2{
+  font-size: 30px;
+}
+.heading span{
+  font-size: var(--p-font);
+  color: rgb(2,166,70);
+}
+
+.heading{
+  margin-top: 20px;
+}
+
+.service-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.service-box{
+  padding: 20px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-bottom: 2px solid var(--main-color);
+  box-shadow: 0 2px 7px rgba(14 55 54/15%);
+}
+.service-box .fa-solid{
+  padding-top: 2rem;
+  font-size: 54px;
+  color: var(--main-color);
+}
+.service-box h3{
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.7rem 0 0.4rem;
+}
+.service-box a{
+  color: var(--main-color);
+  font-size: var(--p-font);
+  font-weight: 500;
+}
+.service-box:hover{
+  background: #02225a;
+}
+.service-box:hover h3{
+  color: #fff;
+}
+.service-box:hover .fa-solid{
+  color: #22cf91;
+}
+.service-box:hover a{
+  color: #8b8a8f;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+  
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute; /* Position the menu absolutely */
+      top: 50px; /* Adjust based on header height */
+      right: 0;
+      background-color: #022553;
+  }
+  
+  .nav-links.active {
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .about-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+       /* Single column layout on small screens */
+  }
+
+
+
+.about-img img {
+  width: 100%; /* Make image responsive */
+  height: 280px;
+  display: block;
+  padding-bottom: 20px;
+  align-items: center; /* Remove bottom space/align issues */
+}
+
+section{
+  padding: 20px;
+}
+}
+
+@media (max-width: 321px) {
+
+  .text-content {
+    padding-left: 0px;/* Center text vertically */
+  }
+  .text-content h1{
+    font-size: 25px;
+  }
+
+  .text-content p{
+    font-size: 15px;
+  }
+
+  .about-img img {
+    width: 100%; /* Make image responsive */
+    height: 10px;
+    height: 230px;
+    display: block;
+    padding-bottom: 20px; /* Remove bottom space/align issues */
+  }
+  
+  .about-container {
+    padding: 20px;
+  }
+  section{
+      padding: 0px;
+  }
+  .heading{
+      margin-top: 20px;
+  }
+  
+}
+
+
+@media (max-width: 376px) {
+
+  .text-content h1{
+    font-size: 28px;
+  }
+
+  .text-content p{
+    font-size: 15px;
+  }
+
+  .about-img img {
+    width: 100%; /* Make image responsive */
+    height: 230px;
+    display: block;
+    padding-bottom: 20px; /* Remove bottom space/align issues */
+  }
+  .grid-container {
+    padding: 20px;
+  }
+  section{
+      padding: 0px;
+  }
+}
